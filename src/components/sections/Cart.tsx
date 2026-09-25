@@ -3,13 +3,13 @@ import { useEffect, useState, type FormEvent } from 'react'
 import { Drawer } from 'vaul'
 import { z } from 'zod'
 import { useIsDesktop } from '../../hooks/useMedia'
-import { getProduct, selectCount, selectSubtotal, useCart, useCartUI, type CartItem } from '../../lib/cart'
+import { STORE } from '../../data/products'
+import { resolveItem, selectCount, selectSubtotal, useCart, useCartUI, type CartItem } from '../../lib/cart'
 import { checkoutProvider, createOrderId, type Order } from '../../lib/checkout'
-import { formatCOP } from '../../lib/format'
+import { formatPrice } from '../../lib/format'
 import { EASE_OUT } from '../../lib/motion'
 import { startScroll, stopScroll } from '../../lib/smooth-scroll'
 import { CountingNumber, RollingNumber } from '../ui/AnimatedNumber'
-import { FrameArt } from '../ui/FrameArt'
 import { PillButton } from '../ui/PillButton'
 
 const schema = z.object({
@@ -24,9 +24,9 @@ function Line({ item }: { item: CartItem }) {
   const setQty = useCart((s) => s.setQty)
   const remove = useCart((s) => s.remove)
   const reduce = useReducedMotion()
-  const p = getProduct(item.productId)
-  if (!p) return null
-  const color = p.colors.find((c) => c.name === item.color) ?? p.colors[0]
+  const resolved = resolveItem(item)
+  if (!resolved) return null
+  const { product: p, variant: v } = resolved
 
   return (
     <motion.li
@@ -37,19 +37,19 @@ function Line({ item }: { item: CartItem }) {
       transition={{ duration: 0.25, ease: EASE_OUT, layout: { duration: 0.3, ease: EASE_OUT } }}
       className="bg-bg/60 flex gap-4 rounded-[22px] p-3"
     >
-      <div className="bg-card grid size-20 shrink-0 place-items-center rounded-2xl p-2">
-        <FrameArt shape={p.shape} frame={color.frame} lens={color.lens} className="w-full" />
+      <div className="grid size-20 shrink-0 place-items-center overflow-hidden rounded-2xl bg-white">
+        <img src={`${v.image}-400.webp`} alt="" width={400} height={200} className="w-full" loading="lazy" decoding="async" />
       </div>
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0">
             <p className="truncate text-[16px] font-normal tracking-[-0.01em]">{p.name}</p>
-            <p className="text-muted text-[13px]">{color.name}</p>
+            <p className="text-muted text-[13px]">{v.color}</p>
           </div>
           <button
             type="button"
             onClick={() => remove(item.key)}
-            aria-label={`Eliminar ${p.name} ${color.name}`}
+            aria-label={`Eliminar ${p.name} ${v.color}`}
             className="press text-muted hover:bg-ink/5 hover:text-ink -mt-1 -mr-1 grid size-9 place-items-center rounded-full"
           >
             <svg viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden>
@@ -85,7 +85,7 @@ function Line({ item }: { item: CartItem }) {
               </svg>
             </button>
           </div>
-          <CountingNumber value={p.price * item.qty} format={formatCOP} className="text-[15px]" />
+          <CountingNumber value={v.price * item.qty} format={formatPrice} className="text-[15px]" />
         </div>
       </div>
     </motion.li>
@@ -203,12 +203,12 @@ function CartBody() {
     setErrors({})
     const order: Order = {
       id: createOrderId(),
-      currency: 'COP',
+      currency: STORE.currency,
       total: subtotal,
       customer: parsed.data,
       lines: items.flatMap((i) => {
-        const p = getProduct(i.productId)
-        return p ? [{ name: p.name, color: i.color, qty: i.qty, unitPrice: p.price }] : []
+        const r = resolveItem(i)
+        return r ? [{ name: r.product.name, color: r.variant.color, qty: i.qty, unitPrice: r.variant.price }] : []
       }),
     }
     setSending(true)
@@ -275,7 +275,7 @@ function CartBody() {
               <span className="text-muted text-[15px]">Subtotal</span>
               <CountingNumber
                 value={subtotal}
-                format={(n) => `${formatCOP(n)} COP`}
+                format={(n) => `${formatPrice(n)} ${STORE.currency}`}
                 className="text-[24px] font-light tracking-[-0.03em]"
               />
             </div>

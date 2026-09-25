@@ -1,8 +1,19 @@
 @import 'tailwindcss';
 
+/* Tipografía de marca: F37 Bolton (variable, peso 20–900). Subset latino en woff2. */
+@font-face {
+  font-family: 'F37 Bolton';
+  src:
+    url('/fonts/F37Bolton-VF.woff2') format('woff2-variations'),
+    url('/fonts/F37Bolton-VF.woff2') format('woff2');
+  font-weight: 20 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ───────── Design tokens ───────── */
 @theme {
-  --font-sans: 'Inter Tight Variable', 'Inter Tight', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-sans: 'F37 Bolton', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --color-bg: #ececea;
   --color-ink: #111111;
@@ -73,13 +84,6 @@ body {
   background-clip: text;
   color: transparent;
   animation: shimmer 6s var(--ease-in-out) infinite alternate;
-}
-.underline-lav {
-  text-decoration: underline;
-  text-decoration-color: #b9a3c8;
-  text-decoration-thickness: max(1px, 0.02em);
-  text-underline-offset: 0.1em;
-  text-decoration-skip-ink: none;
 }
 @keyframes shimmer {
   to {

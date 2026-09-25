@@ -1,0 +1,683 @@
+{
+  "categorias": [
+    "Todos", 
+    "Lentes de Sol", 
+    "Clásicas", 
+    "Deportivos", 
+    "Lectura", 
+    "Premium", 
+    "Ultraligeros"
+  ],
+  "productos": [
+    {
+      "id": "m1",
+      "nombre": "Vyse Alpha",
+      "precio": "$85.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-1.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m1",
+      "url360": "https://vysetech.com.co/Om1",
+      "destacado": true
+    },
+    {
+      "id": "m2",
+      "nombre": "Vyse Wayfarer",
+      "precio": "$65.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-2.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m2",
+      "url360": "https://vysetech.com.co/Om2",
+      "destacado": true
+    },
+    {
+      "id": "m3",
+      "nombre": "Vyse Sport Pro",
+      "precio": "$95.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-3.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m3",
+      "url360": "https://vysetech.com.co/Om3",
+      "destacado": true
+    },
+    {
+      "id": "m4",
+      "nombre": "Vyse Aviator",
+      "precio": "$75.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-4.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m4",
+      "url360": "https://vysetech.com.co/Om4",
+      "destacado": true
+    },
+    {
+      "id": "m5",
+      "nombre": "Vyse ReadLite",
+      "precio": "$45.00",
+      "categoria": "Lectura",
+      "img": "/images/product-item-5.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m5",
+      "url360": "https://vysetech.com.co/Om5",
+      "destacado": true
+    },
+    {
+      "id": "m6",
+      "nombre": "Vyse Titan",
+      "precio": "$110.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-6.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m6",
+      "url360": "https://vysetech.com.co/Om6",
+      "destacado": true
+    },
+    {
+      "id": "m7",
+      "nombre": "Vyse Air",
+      "precio": "$55.00",
+      "categoria": "Ultraligeros",
+      "img": "/images/product-item-7.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m7",
+      "url360": "https://vysetech.com.co/Om7",
+      "destacado": true
+    },
+    {
+      "id": "m8",
+      "nombre": "Vyse Runner",
+      "precio": "$80.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-8.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m8",
+      "url360": "https://vysetech.com.co/Om8",
+      "destacado": true
+    },
+    {
+      "id": "m9",
+      "nombre": "Vyse Classic Round",
+      "precio": "$60.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-9.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m9",
+      "url360": "https://vysetech.com.co/Om9",
+      "destacado": true
+    },
+    {
+      "id": "m10",
+      "nombre": "Vyse Classic Round",
+      "precio": "$60.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-10.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m10",
+      "url360": "https://vysetech.com.co/Om10",
+      "destacado": true
+    },
+    {
+      "id": "m11",
+      "nombre": "Vyse Focus",
+      "precio": "$40.00",
+      "categoria": "Lectura",
+      "img": "/images/product-item-11.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m11",
+      "url360": "https://vysetech.com.co/Om10",
+      "destacado": false
+    },
+    {
+      "id": "m12",
+      "nombre": "Vyse Carbon",
+      "precio": "$125.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-12.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m12",
+      "url360": "https://vysetech.com.co/Om12",
+      "destacado": false
+    },
+    {
+      "id": "m16",
+      "nombre": "Vyse Velocity",
+      "precio": "$90.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-16.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m16",
+      "url360": "https://vysetech.com.co/Om16",
+      "destacado": false
+    },
+    {
+      "id": "m17",
+      "nombre": "Vyse Scholar",
+      "precio": "$35.00",
+      "categoria": "Lectura",
+      "img": "/images/product-item-17.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m17",
+      "url360": "https://vysetech.com.co/Om17",
+      "destacado": false
+    },
+    {
+      "id": "m18",
+      "nombre": "Vyse Gold Edition",
+      "precio": "$140.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-18.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m18",
+      "url360": "https://vysetech.com.co/Om18",
+      "destacado": false
+    },
+    {
+      "id": "m19",
+      "nombre": "Vyse Zero",
+      "precio": "$50.00",
+      "categoria": "Ultraligeros",
+      "img": "/images/product-item-19.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m19",
+      "url360": "https://vysetech.com.co/Om19",
+      "destacado": false
+    },
+    {
+      "id": "m20",
+      "nombre": "Vyse Retro Square",
+      "precio": "$55.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-20.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m20",
+      "url360": "https://vysetech.com.co/Om20",
+      "destacado": false
+    },
+    {
+      "id": "m21",
+      "nombre": "Vyse Beach",
+      "precio": "$60.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-21.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m21",
+      "url360": "https://vysetech.com.co/Om21",
+      "destacado": false
+    },
+    {
+      "id": "m25",
+      "nombre": "Vyse Minimal",
+      "precio": "$65.00",
+      "categoria": "Ultraligeros",
+      "img": "/images/product-item-25.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m25",
+      "url360": "https://vysetech.com.co/Om25",
+      "destacado": false
+    },
+    {
+      "id": "m26",
+      "nombre": "Vyse Oval",
+      "precio": "$55.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-26.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m26",
+      "url360": "https://vysetech.com.co/Om26",
+      "destacado": false
+    },
+    {
+      "id": "m27",
+      "nombre": "Vyse Sunset",
+      "precio": "$75.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-27.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m27",
+      "url360": "https://vysetech.com.co/Om27",
+      "destacado": false
+    },
+    {
+      "id": "m28",
+      "nombre": "Vyse Trail",
+      "precio": "$90.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-28.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m28",
+      "url360": "https://vysetech.com.co/Om28",
+      "destacado": false
+    },
+    {
+      "id": "m30",
+      "nombre": "Vyse Explorer",
+      "precio": "$85.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-30.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m30",
+      "url360": "https://vysetech.com.co/Om30",
+      "destacado": false
+    },
+    {
+      "id": "m31",
+      "nombre": "Vyse Blinks Pro",
+      "precio": "$95.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-31.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m31",
+      "url360": "https://vysetech.com.co/Om31",
+      "destacado": false
+    },
+    {
+      "id": "m33",
+      "nombre": "Vyse Polarized X",
+      "precio": "$105.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-33.png",
+      "simuladorUrl": "https://vysetech.com.co/m33",
+      "url360": "https://vysetech.com.co/Om33",
+      "destacado": false
+    },
+    {
+      "id": "m34",
+      "nombre": "Vyse Blinks Gold",
+      "precio": "$115.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-34.png",
+      "simuladorUrl": "https://vysetech.com.co/m34",
+      "url360": "https://vysetech.com.co/Om34",
+      "destacado": false
+    },
+    {
+      "id": "m35",
+      "nombre": "Vyse Blinks Silver",
+      "precio": "$110.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-35.png",
+      "simuladorUrl": "https://vysetech.com.co/m35",
+      "url360": "https://vysetech.com.co/Om35",
+      "destacado": false
+    },
+    {
+      "id": "m36",
+      "nombre": "Vyse Blinks Matte",
+      "precio": "$100.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-36.png",
+      "simuladorUrl": "https://vysetech.com.co/m36",
+      "url360": "https://vysetech.com.co/Om36",
+      "destacado": false
+    },
+    {
+      "id": "m37",
+      "nombre": "Vyse Blinks Horizon",
+      "precio": "$120.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-37.png",
+      "simuladorUrl": "https://vysetech.com.co/m37",
+      "url360": "https://vysetech.com.co/Om37",
+      "destacado": false
+    },
+    {
+      "id": "m41",
+      "nombre": "Vyse Clear View",
+      "precio": "$65.00",
+      "categoria": "Lectura",
+      "img": "/images/product-item-41.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m41",
+      "url360": "https://vysetech.com.co/Om41",
+      "destacado": false
+    },
+    {
+      "id": "m42",
+      "nombre": "Vyse Urban Edge",
+      "precio": "$75.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-42.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m42",
+      "url360": "https://vysetech.com.co/Om42",
+      "destacado": false
+    },
+    {
+      "id": "m43",
+      "nombre": "Vyse Urban Edge",
+      "precio": "$75.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-43.png",
+      "simuladorUrl": "https://vysetech.com.co/m43",
+      "url360": "https://vysetech.com.co/Om43",
+      "destacado": false
+    },
+    {
+      "id": "m44",
+      "nombre": "Vyse Urban Edge",
+      "precio": "$85.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-44.png",
+      "simuladorUrl": "https://vysetech.com.co/m44",
+      "url360": "https://vysetech.com.co/Om44",
+      "destacado": false
+    },
+    {
+      "id": "m45",
+      "nombre": "Vyse Horizon Sun",
+      "precio": "$85.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-45.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m45",
+      "url360": "https://vysetech.com.co/Om45",
+      "destacado": false
+    },
+    {
+      "id": "m46",
+      "nombre": "Vyse Crystal Pure",
+      "precio": "$90.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-46.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m46",
+      "url360": "https://vysetech.com.co/Om46",
+      "destacado": false
+    },
+    {
+      "id": "m47",
+      "nombre": "Vyse Crystal Pure",
+      "precio": "$90.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-47.png",
+      "simuladorUrl": "https://vysetech.com.co/m47",
+      "url360": "https://vysetech.com.co/Om47",
+      "destacado": false
+    },
+    {
+      "id": "m48",
+      "nombre": "Vyse Crystal Pure",
+      "precio": "$95.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-48.png",
+      "simuladorUrl": "https://vysetech.com.co/m48",
+      "url360": "https://vysetech.com.co/Om48",
+      "destacado": false
+    },
+    {
+      "id": "m49",
+      "nombre": "Vyse Crystal Pure",
+      "precio": "$85.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-49.png",
+      "simuladorUrl": "https://vysetech.com.co/m49",
+      "url360": "https://vysetech.com.co/Om49",
+      "destacado": false
+    },
+    {
+      "id": "m50",
+      "nombre": "Vyse Shield Sport",
+      "precio": "$100.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-50.png",
+      "simuladorUrl": "https://vysetech.com.co/m50",
+      "url360": "https://vysetech.com.co/Om50",
+      "destacado": false
+    },
+    {
+      "id": "m51",
+      "nombre": "Vyse Shield Sport",
+      "precio": "$100.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-51.png",
+      "simuladorUrl": "https://vysetech.com.co/m51",
+      "url360": "https://vysetech.com.co/Om51",
+      "destacado": false
+    },
+    {
+      "id": "m52",
+      "nombre": "Vyse Shield Sport",
+      "precio": "$100.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-52.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m52",
+      "url360": "https://vysetech.com.co/Om52",
+      "destacado": false
+    },
+    {
+      "id": "m53",
+      "nombre": "Vyse Shield Sport",
+      "precio": "$100.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-53.png",
+      "simuladorUrl": "https://vysetech.com.co/m53",
+      "url360": "https://vysetech.com.co/Om53",
+      "destacado": false
+    },
+    {
+      "id": "m54",
+      "nombre": "Vyse Shield Sport",
+      "precio": "$105.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-54.png",
+      "simuladorUrl": "https://vysetech.com.co/m54",
+      "url360": "https://vysetech.com.co/Om54",
+      "destacado": false
+    },
+    {
+      "id": "m55",
+      "nombre": "Vyse Shield Sport",
+      "precio": "$105.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-55.png",
+      "simuladorUrl": "https://vysetech.com.co/m55",
+      "url360": "https://vysetech.com.co/Om55",
+      "destacado": false
+    },
+    {
+      "id": "m56",
+      "nombre": "Vyse Shield Sport",
+      "precio": "$100.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-56.png",
+      "simuladorUrl": "https://vysetech.com.co/m56",
+      "url360": "https://vysetech.com.co/Om56",
+      "destacado": false
+    },
+    {
+      "id": "m57",
+      "nombre": "Vyse Vintage Sun",
+      "precio": "$90.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-57.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m57",
+      "url360": "https://vysetech.com.co/Om57",
+      "destacado": false
+    },
+    {
+      "id": "m58",
+      "nombre": "Vyse Vintage Sun",
+      "precio": "$90.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-58.png",
+      "simuladorUrl": "https://vysetech.com.co/m58",
+      "url360": "https://vysetech.com.co/Om57",
+      "destacado": false
+    },
+    {
+      "id": "m59",
+      "nombre": "Vyse Vintage Sun",
+      "precio": "$95.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-59.png",
+      "simuladorUrl": "https://vysetech.com.co/m59",
+      "url360": "https://vysetech.com.co/Om59",
+      "destacado": false
+    },
+    {
+      "id": "m61",
+      "nombre": "Vyse Horizon Plus",
+      "precio": "$85.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-61.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m61",
+      "url360": "https://vysetech.com.co/Om61",
+      "destacado": false
+    },
+    {
+      "id": "m63",
+      "nombre": "Vyse Horizon Plus",
+      "precio": "$85.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-63.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m63",
+      "url360": "https://vysetech.com.co/Om63",
+      "destacado": false
+    },
+    {
+      "id": "m66",
+      "nombre": "Vyse Prestige",
+      "precio": "$125.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-66.jpg",
+      "simuladorUrl": "https://vysetech.com.co/m66",
+      "url360": "https://vysetech.com.co/Om66",
+      "destacado": false
+    },
+    {
+      "id": "m68",
+      "nombre": "Vyse Quantum",
+      "precio": "$110.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-68.png",
+      "simuladorUrl": "https://vysetech.com.co/m68",
+      "url360": "https://vysetech.com.co/Om68",
+      "destacado": false
+    },
+    {
+      "id": "m73",
+      "nombre": "Vyse Sun Ray",
+      "precio": "$75.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-73.png",
+      "simuladorUrl": "https://vysetech.com.co/m73",
+      "url360": "https://vysetech.com.co/Om73",
+      "destacado": false
+    },
+    {
+      "id": "m74",
+      "nombre": "Vyse Solstice",
+      "precio": "$80.00",
+      "categoria": "Lentes de Sol",
+      "img": "/images/product-item-74.png",
+      "simuladorUrl": "https://vysetech.com.co/m74",
+      "url360": "https://vysetech.com.co/Om74",
+      "destacado": false
+    },
+    {
+      "id": "m75",
+      "nombre": "Vyse Zenith",
+      "precio": "$90.00",
+      "categoria": "Ultraligeros",
+      "img": "/images/product-item-75.png",
+      "simuladorUrl": "https://vysetech.com.co/m75",
+      "url360": "https://vysetech.com.co/Om75",
+      "destacado": false
+    },
+    {
+      "id": "m76",
+      "nombre": "Vyse Apex",
+      "precio": "$105.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-76.png",
+      "simuladorUrl": "https://vysetech.com.co/m76",
+      "url360": "https://vysetech.com.co/Om76",
+      "destacado": false
+    },
+    {
+      "id": "m77",
+      "nombre": "Vyse Legacy",
+      "precio": "$115.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-77.png",
+      "simuladorUrl": "https://vysetech.com.co/m77",
+      "url360": "https://vysetech.com.co/Om77",
+      "destacado": false
+    },
+    {
+      "id": "m78",
+      "nombre": "Vyse Prime",
+      "precio": "$85.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-78.png",
+      "simuladorUrl": "https://vysetech.com.co/m78",
+      "url360": "https://vysetech.com.co/Om78",
+      "destacado": false
+    },
+    {
+      "id": "m79",
+      "nombre": "Vyse Horizon",
+      "precio": "$80.00",
+      "categoria": "Lectura",
+      "img": "/images/product-item-79.png",
+      "simuladorUrl": "https://vysetech.com.co/m79",
+      "url360": "https://vysetech.com.co/Om79",
+      "destacado": false
+    },
+    {
+      "id": "m80",
+      "nombre": "Vyse Sovereign",
+      "precio": "$135.00",
+      "categoria": "Premium",
+      "img": "/images/product-item-80.png",
+      "simuladorUrl": "https://vysetech.com.co/m80",
+      "url360": "https://vysetech.com.co/Om80",
+      "destacado": false
+    },
+    {
+      "id": "mont",
+      "nombre": "Vyse Montura Universal",
+      "precio": "$65.00",
+      "categoria": "Clásicas",
+      "img": "/images/product-item-mont.jpg",
+      "simuladorUrl": "https://vysetech.com.co/mont",
+      "url360": "https://vysetech.com.co/Omont",
+      "destacado": false
+    },
+    {
+      "id": "mx1",
+      "nombre": "Vyse MX Pro 1",
+      "precio": "$95.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-mx1.jpg",
+      "simuladorUrl": "https://vysetech.com.co/mx1",
+      "url360": "https://vysetech.com.co/Omx1",
+      "destacado": false
+    },
+    {
+      "id": "mx2",
+      "nombre": "Vyse MX Pro 2",
+      "precio": "$100.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-mx2.jpg",
+      "simuladorUrl": "https://vysetech.com.co/mx2",
+      "url360": "https://vysetech.com.co/Omx2",
+      "destacado": false
+    },
+    {
+      "id": "mx3",
+      "nombre": "Vyse MX Pro 3",
+      "precio": "$105.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-mx3.jpg",
+      "simuladorUrl": "https://vysetech.com.co/mx3",
+      "url360": "https://vysetech.com.co/Omx3",
+      "destacado": false
+    },
+    {
+      "id": "mx4",
+      "nombre": "Vyse MX Pro 4",
+      "precio": "$110.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-mx4.jpg",
+      "simuladorUrl": "https://vysetech.com.co/mx4",
+      "url360": "https://vysetech.com.co/Omx4",
+      "destacado": false
+    },
+    {
+      "id": "mx5",
+      "nombre": "Vyse MX Pro 5",
+      "precio": "$115.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-mx5.jpg",
+      "simuladorUrl": "https://vysetech.com.co/mx5",
+      "url360": "https://vysetech.com.co/Omx5",
+      "destacado": false
+    },
+    {
+      "id": "mx6",
+      "nombre": "Vyse MX Pro 6",
+      "precio": "$120.00",
+      "categoria": "Deportivos",
+      "img": "/images/product-item-mx6.jpg",
+      "simuladorUrl": "https://vysetech.com.co/mx6",
+      "url360": "https://vysetech.com.co/Omx6",
+      "destacado": false
+    }
+  ]
+}

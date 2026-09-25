@@ -1,17 +1,18 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { products, type Product } from '../data/products'
+import { products, type Product, type ProductVariant } from '../data/products'
 
 export interface CartItem {
-  key: string // productId:color
+  /** id de la variante (cada color es una referencia distinta) */
+  key: string
   productId: string
-  color: string
+  variantId: string
   qty: number
 }
 
 interface CartState {
   items: CartItem[]
-  add: (productId: string, color: string, qty?: number) => void
+  add: (productId: string, variantId: string, qty?: number) => void
   setQty: (key: string, qty: number) => void
   remove: (key: string) => void
   clear: () => void
@@ -21,13 +22,13 @@ export const useCart = create<CartState>()(
   persist(
     (set) => ({
       items: [],
-      add: (productId, color, qty = 1) =>
+      add: (productId, variantId, qty = 1) =>
         set((s) => {
-          const key = `${productId}:${color}`
+          const key = variantId
           if (s.items.some((i) => i.key === key)) {
             return { items: s.items.map((i) => (i.key === key ? { ...i, qty: Math.min(i.qty + qty, 99) } : i)) }
           }
-          return { items: [...s.items, { key, productId, color, qty }] }
+          return { items: [...s.items, { key, productId, variantId, qty }] }
         }),
       setQty: (key, qty) =>
         set((s) => ({
@@ -37,7 +38,12 @@ export const useCart = create<CartState>()(
       remove: (key) => set((s) => ({ items: s.items.filter((i) => i.key !== key) })),
       clear: () => set({ items: [] }),
     }),
-    { name: 'vyse-cart', version: 1 },
+    {
+      name: 'vyse-cart',
+      version: 2,
+      // v1 guardaba productos del catálogo de prueba, que ya no existen
+      migrate: () => ({ items: [] }),
+    },
   ),
 )
 
@@ -62,7 +68,13 @@ export const useCartUI = create<CartUIState>()((set) => ({
 }))
 
 const byId = new Map(products.map((p) => [p.id, p]))
-export const getProduct = (id: string): Product | undefined => byId.get(id)
+
+/** Producto y variante de una línea del carrito (undefined si el catálogo cambió). */
+export function resolveItem(item: CartItem): { product: Product; variant: ProductVariant } | undefined {
+  const product = byId.get(item.productId)
+  const variant = product?.variants.find((v) => v.id === item.variantId)
+  return product && variant ? { product, variant } : undefined
+}
 
 export const selectCount = (s: CartState) => s.items.reduce((n, i) => n + i.qty, 0)
-export const selectSubtotal = (s: CartState) => s.items.reduce((sum, i) => sum + (byId.get(i.productId)?.price ?? 0) * i.qty, 0)
+export const selectSubtotal = (s: CartState) => s.items.reduce((sum, i) => sum + (resolveItem(i)?.variant.price ?? 0) * i.qty, 0)

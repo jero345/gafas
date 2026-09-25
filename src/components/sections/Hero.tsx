@@ -19,7 +19,7 @@ export function Hero() {
         <h1 className="mx-auto text-[clamp(2.7rem,5.8vw,6.25rem)] leading-[1.02] font-light tracking-[-0.045em]">
           <WordReveal
             delay={0.1}
-            parts={['La nueva forma de', { br: 'sm' }, 'vender', { text: 'gafas online', className: 'text-gradient underline-lav' }]}
+            parts={['La nueva forma de', { br: 'sm' }, 'vender', { text: 'gafas online', className: 'text-gradient' }]}
           />
         </h1>
 
@@ -34,7 +34,7 @@ export function Hero() {
 
       <motion.p
         {...fadeUp(1.1)}
-        className="text-ink/80 relative z-10 mx-auto max-w-[50ch] px-4 pt-[calc(var(--card-w)*0.2)] pb-[calc(var(--card-w)*0.12)] text-center text-[13px] leading-snug [--card-w:42vw] sm:[--card-w:28vw] md:text-[14px] lg:[--card-w:min(15.6vw,320px)]"
+        className="text-ink/85 relative z-[150] mx-auto -mt-[calc(var(--card-w)*0.5)] max-w-[44ch] px-4 pb-[calc(var(--card-w)*0.6)] text-center text-[16px] leading-snug [--card-w:42vw] sm:[--card-w:28vw] md:text-[18px] lg:[--card-w:min(15.6vw,320px)]"
       >
         VYSE es una plataforma diseñada para marcas de gafas que quieren ofrecer prueba virtual realista
       </motion.p>

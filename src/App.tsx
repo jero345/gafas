@@ -69,7 +69,7 @@ export default function App() {
         position="bottom-center"
         offset={96}
         toastOptions={{
-          style: { borderRadius: 20, background: '#111', color: '#ECECEA', border: 'none', fontFamily: 'Inter Tight Variable, sans-serif' },
+          style: { borderRadius: 20, background: '#111', color: '#ECECEA', border: 'none', fontFamily: 'F37 Bolton, sans-serif' },
           actionButtonStyle: { background: '#D9CCE3', color: '#111', borderRadius: 999 },
           classNames: { description: '!text-[#c9c8c4]' },
         }}

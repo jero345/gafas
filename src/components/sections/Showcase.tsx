@@ -37,13 +37,7 @@ export function Showcase() {
     <section id="nosotros" ref={root} aria-labelledby="showcase-title" className="relative overflow-hidden px-4 pt-24 md:px-8 md:pt-32">
       <div className="mx-auto max-w-[1440px] text-center">
         <h2 id="showcase-title" className="text-[clamp(2.7rem,5.8vw,6.25rem)] leading-[1.02] font-light tracking-[-0.045em]">
-          <WordReveal
-            inView
-            parts={[
-              { text: 'pide tu', className: 'text-gradient' },
-              { text: 'demo', className: 'text-gradient underline-lav' },
-            ]}
-          />
+          <WordReveal inView parts={[{ text: 'pide tu demo', className: 'text-gradient' }]} />
         </h2>
         <Reveal delay={0.15}>
           <p className="text-ink/80 mx-auto mt-5 max-w-[72ch] text-[15px] leading-snug md:text-[16px]">

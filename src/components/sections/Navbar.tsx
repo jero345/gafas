@@ -123,7 +123,7 @@ export function Navbar() {
         }`}
       >
         <a href="#top" onClick={onAnchorClick} className="press shrink-0 rounded-md" aria-label="VYSE, ir al inicio">
-          <Logo className="h-6 w-auto md:h-7" />
+          <Logo className="h-8 w-auto md:h-9" />
         </a>
 
         <ul className="hidden items-center gap-3 lg:flex">

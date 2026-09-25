@@ -1,4 +1,5 @@
-import { formatCOP } from './format'
+import { STORE } from '../data/products'
+import { formatPrice } from './format'
 import { track } from './tracking'
 import { openWhatsApp } from './whatsapp'
 
@@ -19,7 +20,7 @@ export interface Order {
   id: string
   lines: OrderLine[]
   total: number
-  currency: 'COP'
+  currency: string
   customer: Customer
 }
 
@@ -39,13 +40,13 @@ export function createOrderId(date = new Date()) {
 }
 
 export function buildOrderMessage(order: Order) {
-  const lines = order.lines.map((l) => `• ${l.qty}x ${l.name} (${l.color}) — ${formatCOP(l.qty * l.unitPrice)}`)
+  const lines = order.lines.map((l) => `• ${l.qty}x ${l.name} (${l.color}) — ${formatPrice(l.qty * l.unitPrice)}`)
   const { name, city, address } = order.customer
   return [
     'Hola VYSE 👋 Quiero hacer este pedido:',
     `Pedido: ${order.id}`,
     ...lines,
-    `Total: ${formatCOP(order.total)} COP`,
+    `Total: ${formatPrice(order.total)} ${STORE.currency}`,
     `Nombre: ${name} | Ciudad: ${city} | Dirección: ${address}`,
   ].join('\n')
 }

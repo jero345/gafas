@@ -15,10 +15,7 @@ export function FinalCTA() {
           id="cta-title"
           className="mx-auto max-w-[14ch] text-[clamp(2.6rem,8vw,7.5rem)] leading-[0.92] font-extralight tracking-[var(--tracking-tightest)]"
         >
-          <WordReveal
-            inView
-            parts={['Lleva tu óptica al siguiente nivel.', { text: 'Pide tu demo', className: 'text-gradient underline-lav' }]}
-          />
+          <WordReveal inView parts={['Lleva tu óptica al siguiente nivel.', { text: 'Pide tu demo', className: 'text-gradient' }]} />
         </h2>
         <p className="text-bg/70 mx-auto mt-6 max-w-[42ch] text-[17px] leading-relaxed">
           En 20 minutos te mostramos VYSE con tu propio catálogo. Sin compromiso.
@@ -43,7 +40,7 @@ export function Footer() {
     <footer className="px-4 pt-16 pb-10 md:px-8">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div>
-          <Logo className="h-10 w-auto md:h-14" />
+          <Logo className="h-14 w-auto md:h-20" />
           <p className="text-muted mt-4 max-w-[34ch] text-[15px]">Prueba virtual de gafas para ópticas y marcas. Hecho en Colombia.</p>
         </div>
         <nav aria-label="Pie de página">

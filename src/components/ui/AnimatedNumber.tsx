@@ -41,5 +41,5 @@ export function CountingNumber({ value, format, className = '' }: { value: numbe
   useEffect(() => {
     spring.set(value)
   }, [spring, value])
-  return <motion.span className={`tabular-nums ${className}`}>{text}</motion.span>
+  return <motion.span className={className}>{text}</motion.span>
 }
