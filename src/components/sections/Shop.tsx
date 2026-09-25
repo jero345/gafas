@@ -349,12 +349,12 @@ export function Shop() {
   return (
     <section id="tienda" aria-labelledby="shop-title" className="px-4 pt-24 pb-12 md:px-8 md:pt-36 md:pb-16">
       <div className="mx-auto max-w-[1440px]">
-        <div className="flex flex-col items-start gap-8">
+        <div className="flex flex-col items-center gap-8 text-center">
           <div>
             <p className="text-muted mb-5 text-[13px] tracking-[0.18em] uppercase">Tienda</p>
             <h2
               id="shop-title"
-              className="max-w-[14ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[1.02] font-extralight tracking-[var(--tracking-tightest)]"
+              className="mx-auto max-w-[14ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[1.02] font-extralight tracking-[var(--tracking-tightest)]"
             >
               <WordReveal inView parts={['Monturas que se', { text: 'prueban solas', className: 'text-gradient' }]} />
             </h2>
