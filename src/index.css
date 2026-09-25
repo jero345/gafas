@@ -1,0 +1,198 @@
+@import 'tailwindcss';
+
+/* ───────── Design tokens ───────── */
+@theme {
+  --font-sans: 'Inter Tight Variable', 'Inter Tight', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-bg: #ececea;
+  --color-ink: #111111;
+  --color-card: #f5f4f1;
+  --color-muted: #5c5b58; /* AA sobre #ECECEA y #F5F4F1 */
+  --color-line: #d6d5d1;
+  --color-lav-100: #d9cce3;
+  --color-lav-500: #a78ab5;
+  --color-lav-700: #6e5580; /* texto lavanda con contraste AA */
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  --tracking-tightest: -0.055em;
+  --tracking-display: -0.045em;
+}
+
+:root {
+  color-scheme: light;
+  /* D9CCE3 → A78AB5, con un paso más profundo para que el texto sea legible (≥3:1 en titulares) */
+  --grad-lav: linear-gradient(90deg, #b9a3cb 0%, #a78ab5 30%, #8b6d9d 55%, #a78ab5 80%, #c2afd1 100%);
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-lav-100);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+/* ───────── Texto en gradiente con shimmer ───────── */
+.text-gradient {
+  background-image: var(--grad-lav);
+  background-size: 300% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 7s var(--ease-in-out) infinite alternate;
+}
+.underline-lav {
+  text-decoration: underline;
+  text-decoration-color: var(--color-lav-500);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+@keyframes shimmer {
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* ───────── Botones píldora ───────── */
+.pill {
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 200ms ease,
+    color 200ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.pill:active {
+  transform: scale(0.97);
+}
+.pill-arrow > span {
+  transition: transform 260ms var(--ease-out);
+}
+.pill-arrow > span:last-child {
+  transform: translate(-150%, 150%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .pill:hover .pill-arrow > span:first-child {
+    transform: translate(150%, -150%);
+  }
+  .pill:hover .pill-arrow > span:last-child {
+    transform: translate(0, 0);
+  }
+}
+
+.press {
+  transition: transform 160ms var(--ease-out);
+}
+.press:active {
+  transform: scale(0.97);
+}
+
+/* ───────── Monturas flotando ───────── */
+.float {
+  animation: float 6s var(--ease-in-out) infinite alternate;
+}
+@keyframes float {
+  to {
+    transform: translateY(-14px);
+  }
+}
+
+/* ───────── Marquee ───────── */
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ───────── Pulso WhatsApp ───────── */
+.pulse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #25d366;
+  animation: pulse 2.4s var(--ease-out) infinite;
+  z-index: -1;
+}
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* ───────── Borde que sigue el cursor ───────── */
+.glow-border {
+  padding: 1px;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+}
+
+/* ───────── Reduced motion: solo fades ───────── */
+@media (prefers-reduced-motion: reduce) {
+  .text-gradient,
+  .float,
+  .marquee-track {
+    animation: none;
+  }
+  .marquee-track {
+    transform: none;
+  }
+  .pulse::before {
+    animation: none;
+    opacity: 0;
+  }
+  .pill,
+  .press,
+  .pill-arrow > span {
+    transition: opacity 200ms ease;
+  }
+}

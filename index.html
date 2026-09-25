@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>VYSE — Prueba tus gafas online</title>
+    <meta name="description" content="VYSE es la plataforma de prueba virtual de gafas para ópticas y marcas. Tus clientes se prueban cada montura desde el celular y compran con confianza." />
+    <meta name="theme-color" content="#ECECEA" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://vyse.co/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="VYSE" />
+    <meta property="og:title" content="VYSE — Prueba tus gafas online" />
+    <meta property="og:description" content="Prueba virtual de gafas para ópticas y marcas. Sube tu catálogo, deja que tus clientes se prueben cada montura y vende más." />
+    <meta property="og:url" content="https://vyse.co/" />
+    <meta property="og:image" content="https://vyse.co/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VYSE — Prueba tus gafas online" />
+    <meta name="twitter:description" content="Prueba virtual de gafas para ópticas y marcas." />
+    <meta name="twitter:image" content="https://vyse.co/og.png" />
+
+    <link rel="preload" as="image" href="/portraits/3.webp" type="image/webp" imagesrcset="/portraits/3-400.webp 400w, /portraits/3.webp 720w" imagesizes="(min-width: 1536px) 340px, (min-width: 1024px) 22vw, (min-width: 640px) 30vw, 44vw" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://vyse.co/#org",
+            "name": "VYSE",
+            "url": "https://vyse.co/",
+            "logo": "https://vyse.co/favicon.svg",
+            "description": "Plataforma de prueba virtual de gafas.",
+            "areaServed": "CO",
+            "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "availableLanguage": ["es"] }
+          },
+          {
+            "@type": "Product",
+            "name": "Montura Aura",
+            "brand": { "@type": "Brand", "name": "VYSE" },
+            "image": "https://vyse.co/frames/optical.webp",
+            "description": "Montura oftálmica de acetato con perfil rectangular suave.",
+            "offers": { "@type": "Offer", "price": "180000", "priceCurrency": "COP", "availability": "https://schema.org/InStock" }
+          },
+          {
+            "@type": "Product",
+            "name": "Montura Lumen",
+            "brand": { "@type": "Brand", "name": "VYSE" },
+            "image": "https://vyse.co/frames/sun.webp",
+            "description": "Montura de sol redondeada en acetato carey.",
+            "offers": { "@type": "Offer", "price": "210000", "priceCurrency": "COP", "availability": "https://schema.org/InStock" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
