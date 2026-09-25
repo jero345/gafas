@@ -16,6 +16,29 @@ export const NAV_LINKS = [
   { label: 'Contacto', href: '#contacto' },
 ]
 
+/** Sección visible para marcar el enlace activo (en el hero, "Nosotros", como en el mockup). */
+function useActiveSection() {
+  const [active, setActive] = useState('#nosotros')
+  useEffect(() => {
+    const ids = NAV_LINKS.map((l) => l.href)
+    const els = ids.map((id) => document.querySelector(id)).filter((el): el is Element => !!el)
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) setActive(`#${e.target.id}`)
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    )
+    els.forEach((el) => io.observe(el))
+    const onTop = () => window.scrollY < 200 && setActive('#nosotros')
+    window.addEventListener('scroll', onTop, { passive: true })
+    return () => {
+      io.disconnect()
+      window.removeEventListener('scroll', onTop)
+    }
+  }, [])
+  return active
+}
+
 export const onAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   const href = e.currentTarget.getAttribute('href')
   if (!href?.startsWith('#')) return
@@ -34,7 +57,7 @@ function CartButton() {
       type="button"
       onClick={() => setOpen(true)}
       aria-label={`Abrir carrito, ${count} ${count === 1 ? 'producto' : 'productos'}`}
-      className="press border-ink/15 bg-card/80 relative grid size-11 place-items-center rounded-full border"
+      className="press border-ink/15 bg-card/80 relative grid size-10 place-items-center rounded-full border lg:size-9"
       key={bump}
       animate={bump && !reduce ? { scale: [1, 1.18, 0.94, 1] } : undefined}
       transition={{ duration: 0.45, ease: EASE_OUT }}
@@ -67,6 +90,7 @@ export function Navbar() {
   const [menu, setMenu] = useState(false)
   const reduce = useReducedMotion()
   const reveal = useCartUI((s) => s.reveal)
+  const activeHref = useActiveSection()
 
   useEffect(() => {
     if (reveal) setHidden(false)
@@ -94,7 +118,7 @@ export function Navbar() {
     >
       <nav
         aria-label="Principal"
-        className={`mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-4 rounded-full px-4 transition-[background-color,box-shadow,backdrop-filter] duration-300 md:px-6 ${
+        className={`mx-auto flex h-14 max-w-[1440px] items-center justify-between gap-4 rounded-full px-4 transition-[background-color,box-shadow,backdrop-filter] duration-300 md:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] ${
           scrolled || menu ? 'bg-bg/70 shadow-[0_1px_0_rgba(17,17,17,0.06),0_8px_30px_-12px_rgba(17,17,17,0.12)] backdrop-blur-xl' : ''
         }`}
       >
@@ -102,13 +126,16 @@ export function Navbar() {
           <Logo className="h-6 w-auto md:h-7" />
         </a>
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden items-center gap-3 lg:flex">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
                 onClick={onAnchorClick}
-                className="text-ink/80 hover:text-ink rounded-full px-3 py-2 text-[15px] transition-colors duration-200"
+                aria-current={activeHref === l.href ? 'location' : undefined}
+                className={`hover:text-ink rounded-full px-3 py-2 text-[14px] transition-colors duration-200 ${
+                  activeHref === l.href ? 'text-ink font-semibold' : 'text-ink/75'
+                }`}
               >
                 {l.label}
               </a>
@@ -116,21 +143,21 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
-          <span className="hidden xl:contents">
-            <PillButton href={whatsappUrl(DEMO_MESSAGE)} size="sm" variant="outline">
+        <div className="flex items-center gap-1.5 lg:justify-self-end">
+          <span className="hidden lg:contents">
+            <PillButton href={whatsappUrl(DEMO_MESSAGE)} size="xs" variant="outline">
               Pide un Demo
             </PillButton>
           </span>
           <span className="hidden md:contents">
-            <PillButton href={whatsappUrl(APPOINTMENT_MESSAGE)} size="sm" variant="filled">
+            <PillButton href={whatsappUrl(APPOINTMENT_MESSAGE)} size="xs" variant="filled">
               Agenda una cita
             </PillButton>
           </span>
           <CartButton />
           <button
             type="button"
-            className="press border-ink/15 bg-card/80 grid size-11 place-items-center rounded-full border lg:hidden"
+            className="press border-ink/15 bg-card/80 grid size-10 place-items-center rounded-full border lg:hidden"
             aria-expanded={menu}
             aria-controls="mobile-menu"
             aria-label={menu ? 'Cerrar menú' : 'Abrir menú'}

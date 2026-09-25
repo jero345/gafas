@@ -23,8 +23,8 @@
 
 :root {
   color-scheme: light;
-  /* D9CCE3 → A78AB5, con un paso más profundo para que el texto sea legible (≥3:1 en titulares) */
-  --grad-lav: linear-gradient(90deg, #b9a3cb 0%, #a78ab5 30%, #8b6d9d 55%, #a78ab5 80%, #c2afd1 100%);
+  /* Mockup: lavanda claro #D9CCE3 → #A78AB5 a lo largo de toda la frase */
+  --grad-lav: linear-gradient(90deg, #d4c6df 0%, #b9a2c8 30%, #a78ab5 50%, #9c7eab 65%, #c3b0d2 85%, #a78ab5 100%);
 }
 
 html {
@@ -67,22 +67,23 @@ body {
 /* ───────── Texto en gradiente con shimmer ───────── */
 .text-gradient {
   background-image: var(--grad-lav);
-  background-size: 300% 100%;
+  background-size: 200% 100%;
   background-position: 0% 50%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: shimmer 7s var(--ease-in-out) infinite alternate;
+  animation: shimmer 6s var(--ease-in-out) infinite alternate;
 }
 .underline-lav {
   text-decoration: underline;
-  text-decoration-color: var(--color-lav-500);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.14em;
+  text-decoration-color: #b9a3c8;
+  text-decoration-thickness: max(1px, 0.02em);
+  text-underline-offset: 0.1em;
+  text-decoration-skip-ink: none;
 }
 @keyframes shimmer {
   to {
-    background-position: 100% 50%;
+    background-position: 60% 50%;
   }
 }
 

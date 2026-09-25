@@ -17,8 +17,7 @@ export function FinalCTA() {
         >
           <WordReveal
             inView
-            text="Lleva tu óptica al siguiente nivel. Pide tu demo"
-            render={(w, i) => (i >= 6 ? <span className="text-gradient underline-lav">{w}</span> : w)}
+            parts={['Lleva tu óptica al siguiente nivel.', { text: 'Pide tu demo', className: 'text-gradient underline-lav' }]}
           />
         </h2>
         <p className="text-bg/70 mx-auto mt-6 max-w-[42ch] text-[17px] leading-relaxed">

@@ -55,8 +55,8 @@ export default function App() {
       <main id="main">
         <Hero />
         <Showcase />
-        <HowItWorks />
         <Pricing />
+        <HowItWorks />
         <Shop />
         <Testimonials />
         <FAQ />

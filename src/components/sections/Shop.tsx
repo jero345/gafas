@@ -291,11 +291,7 @@ export function Shop() {
               id="shop-title"
               className="max-w-[14ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[0.95] font-extralight tracking-[var(--tracking-tightest)]"
             >
-              <WordReveal
-                inView
-                text="Monturas que se prueban solas"
-                render={(w, i) => (i >= 3 ? <span className="text-gradient underline-lav">{w}</span> : w)}
-              />
+              <WordReveal inView parts={['Monturas que se', { text: 'prueban solas', className: 'text-gradient underline-lav' }]} />
             </h2>
           </div>
           <div
