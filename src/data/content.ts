@@ -1,18 +1,31 @@
+// Textos de optica.johnbecerra.dev/como-funciona (sitio del cliente)
+export const how = {
+  eyebrow: 'Modo de uso',
+  title: '¿Cómo tener tu widget VYSE?',
+  intro: 'Sigue estos 4 pasos sencillos para llevar tu óptica al siguiente nivel de experiencia digital.',
+  cta: '¿Listo para comenzar tu transformación digital?',
+}
+
 export const steps = [
   {
     n: '01',
-    title: 'Sube tu catálogo',
-    body: 'Carga fotos de tus monturas o conecta tu tienda. Nuestro equipo las convierte en modelos listos para la prueba virtual en 48 horas.',
+    title: 'Explora y selecciona',
+    body: 'Navega por nuestro catálogo, prueba los modelos con nuestro simulador y agrega tus favoritos a tu lista de selección personal.',
   },
   {
     n: '02',
-    title: 'Prueba virtual',
-    body: 'Tus clientes se prueban cada montura en tiempo real desde el celular, con ajuste a la forma de su rostro y sin descargar nada.',
+    title: 'Elige tu plan',
+    body: 'Selecciona el plan que mejor se adapte a tu marca (Lite, Pro o Max) y completa tu suscripción de forma segura.',
   },
   {
     n: '03',
-    title: 'Vende más',
-    body: 'Quien se ve con sus gafas, compra. Recibe pedidos por WhatsApp o en tu checkout y mide qué monturas convierten mejor.',
+    title: 'Solicita tu widget',
+    body: 'Una vez suscrito, podrás solicitar la personalización y generación de tus widgets interactivos desde tu panel de control.',
+  },
+  {
+    n: '04',
+    title: 'Implementa en tu web',
+    body: 'Copia el código único que generamos para ti, pégalo en tu sitio web y ¡listo! Tu óptica ya es digital e interactiva.',
   },
 ]
 

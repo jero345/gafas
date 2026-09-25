@@ -159,7 +159,13 @@ function ProductCard({ product, onQuickView }: { product: Product; onQuickView: 
             className="w-full transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
             style={{ transform: hover && !reduce ? 'rotate(-5deg) scale(1.06)' : 'rotate(0deg)' }}
           >
-            <FrameImage product={product} index={idx} hover={hover} sizes="(min-width: 1280px) 330px, (min-width: 640px) 45vw, 90vw" decorative />
+            <FrameImage
+              product={product}
+              index={idx}
+              hover={hover}
+              sizes="(min-width: 1280px) 330px, (min-width: 640px) 45vw, 90vw"
+              decorative
+            />
           </div>
         </motion.div>
         <span aria-hidden className="bg-bg/90 text-muted absolute top-3 left-3 rounded-full px-2.5 py-1 text-[12px]">
@@ -341,14 +347,14 @@ export function Shop() {
   const visible = filtered.slice(0, shown)
 
   return (
-    <section id="tienda" aria-labelledby="shop-title" className="px-4 py-24 md:px-8 md:py-36">
+    <section id="tienda" aria-labelledby="shop-title" className="px-4 pt-24 pb-12 md:px-8 md:pt-36 md:pb-16">
       <div className="mx-auto max-w-[1440px]">
         <div className="flex flex-col items-start gap-8">
           <div>
             <p className="text-muted mb-5 text-[13px] tracking-[0.18em] uppercase">Tienda</p>
             <h2
               id="shop-title"
-              className="max-w-[14ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[0.95] font-extralight tracking-[var(--tracking-tightest)]"
+              className="max-w-[14ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[1.02] font-extralight tracking-[var(--tracking-tightest)]"
             >
               <WordReveal inView parts={['Monturas que se', { text: 'prueban solas', className: 'text-gradient' }]} />
             </h2>

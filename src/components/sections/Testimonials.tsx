@@ -26,12 +26,12 @@ function Card({ t, hidden }: { t: (typeof testimonials)[number]; hidden?: boolea
 
 export function Testimonials() {
   return (
-    <section aria-labelledby="t-title" className="py-24 md:py-36">
+    <section aria-labelledby="t-title" className="pt-8 pb-24 md:pt-10 md:pb-36">
       <Reveal className="mx-auto max-w-[1440px] px-4 md:px-8">
         <p className="text-muted mb-5 text-[13px] tracking-[0.18em] uppercase">Testimonios</p>
         <h2
           id="t-title"
-          className="max-w-[16ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[0.95] font-extralight tracking-[var(--tracking-tightest)]"
+          className="max-w-[16ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[1.02] font-extralight tracking-[var(--tracking-tightest)]"
         >
           Ópticas que ya venden con VYSE
         </h2>

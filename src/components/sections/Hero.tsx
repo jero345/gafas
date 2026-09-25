@@ -34,7 +34,7 @@ export function Hero() {
 
       <motion.p
         {...fadeUp(1.1)}
-        className="text-ink/85 relative z-[150] mx-auto -mt-[calc(var(--card-w)*0.5)] max-w-[44ch] px-4 pb-[calc(var(--card-w)*0.6)] text-center text-[16px] leading-snug [--card-w:42vw] sm:[--card-w:28vw] md:text-[18px] lg:[--card-w:min(15.6vw,320px)]"
+        className="text-ink/85 relative z-[150] mx-auto -mt-[calc(var(--card-w)*0.5)] max-w-[44ch] px-4 pb-[calc(var(--card-w)*0.6)] text-center text-[17px] leading-snug [--card-w:42vw] sm:[--card-w:28vw] md:text-[21px] lg:-mt-[calc(var(--card-w)*0.08)] lg:pb-[calc(var(--card-w)*0.3)] lg:[--card-w:min(15.6vw,320px)]"
       >
         VYSE es una plataforma diseñada para marcas de gafas que quieren ofrecer prueba virtual realista
       </motion.p>

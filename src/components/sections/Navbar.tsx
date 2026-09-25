@@ -10,6 +10,7 @@ import { RollingNumber } from '../ui/AnimatedNumber'
 
 export const NAV_LINKS = [
   { label: 'Nosotros', href: '#nosotros' },
+  { label: 'Cómo funciona', href: '#como-funciona' },
   { label: 'Soporte', href: '#soporte' },
   { label: 'Precios', href: '#precios' },
   { label: 'Tienda', href: '#tienda' },
@@ -123,17 +124,17 @@ export function Navbar() {
         }`}
       >
         <a href="#top" onClick={onAnchorClick} className="press shrink-0 rounded-md" aria-label="VYSE, ir al inicio">
-          <Logo className="h-8 w-auto md:h-9" />
+          <Logo className="h-10 w-auto md:h-12" />
         </a>
 
-        <ul className="hidden items-center gap-3 lg:flex">
+        <ul className="hidden items-center gap-0.5 lg:flex xl:gap-3">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
                 onClick={onAnchorClick}
                 aria-current={activeHref === l.href ? 'location' : undefined}
-                className={`hover:text-ink rounded-full px-3 py-2 text-[14px] transition-colors duration-200 ${
+                className={`hover:text-ink rounded-full px-2.5 py-2 text-[14px] whitespace-nowrap transition-colors duration-200 xl:px-3 ${
                   activeHref === l.href ? 'text-ink font-semibold' : 'text-ink/75'
                 }`}
               >
@@ -144,7 +145,7 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-1.5 lg:justify-self-end">
-          <span className="hidden lg:contents">
+          <span className="hidden xl:contents">
             <PillButton href={whatsappUrl(DEMO_MESSAGE)} size="xs" variant="outline">
               Pide un Demo
             </PillButton>

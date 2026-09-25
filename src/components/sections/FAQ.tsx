@@ -55,7 +55,7 @@ export function FAQ() {
           <p className="text-muted mb-5 text-[13px] tracking-[0.18em] uppercase">Soporte</p>
           <h2
             id="faq-title"
-            className="max-w-[12ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[0.95] font-extralight tracking-[var(--tracking-tightest)]"
+            className="max-w-[12ch] text-[clamp(2.4rem,6vw,5.5rem)] leading-[1.02] font-extralight tracking-[var(--tracking-tightest)]"
           >
             Preguntas frecuentes
           </h2>
